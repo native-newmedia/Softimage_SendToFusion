@@ -1,7 +1,7 @@
 Softimage_SendToFusion
 ======================
 
-Send selected nulls and cameras to Fusion. Requires PeyeonScript and a running instance of Fusion.
+Send selected nulls and cameras to Fusion. Requires [PeyeonScript](http://www.eyeonline.com/DownloadFusion2.html) and a running instance of Fusion.
 
 ___
 *INSTALLATION:* <br/>
