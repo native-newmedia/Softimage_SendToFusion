@@ -6,7 +6,7 @@ With Fusion running in the background, select the nulls and cameras you want to 
 
 ___
 *INSTALLATION:* <br/>
-- Download and install [PeyeonScript](http://www.eyeonline.com/DownloadFusion2.html) 
+- Download and install [PeyeonScript](http://www.eyeonline.com/DownloadFusion2.html). As long as this is in a location that is referenced by the PYTHONPATH environment variable, Softimage will import the PeyeonScript module, allowing you to communicate with Fusion.
 - Download and install 'SendToFusion.xsiaddon' to your plugins or workgroup.
 
 ___
