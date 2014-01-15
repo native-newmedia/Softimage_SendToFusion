@@ -1,11 +1,13 @@
 Softimage_SendToFusion
 ======================
 
-Send selected nulls and cameras to Fusion. Requires [PeyeonScript](http://www.eyeonline.com/DownloadFusion2.html) and a running instance of Fusion.
+Send selected nulls and cameras to Fusion.
+With Fusion running in the background, select the nulls and cameras you want to send, right-click in the Scene Explorer, and choose 'Send To Fusion'.
 
 ___
 *INSTALLATION:* <br/>
-Download and install 'SendToFusion.xsiaddon' to your plugins or workgroup.
+- Download and install [PeyeonScript](http://www.eyeonline.com/DownloadFusion2.html) 
+- Download and install 'SendToFusion.xsiaddon' to your plugins or workgroup.
 
 ___
 *SUPPORTED PARAMETERS:* <br/>
