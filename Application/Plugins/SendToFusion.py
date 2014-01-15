@@ -1,7 +1,7 @@
 # SendToFusion
 #
 # Tim Crowson for Magnetic Dreams
-# February, 2013
+# January, 2014
 #
 # DESCRIPTION:
 # Send Nulls and Cameras To Fusion, app-link style
@@ -65,10 +65,15 @@ def SendToFusion_Execute(  ):
 		sceneStart = int(Application.GetValue('PlayControl.In'))
 		sceneEnd = int(Application.GetValue('PlayControl.Out'))
 
-		def transferItem(item, regID):
-			# First, check all items in Fusion to see if our selected item exists. Create it if it doesn't.
-			allTools = comp.GetToolList(False, regID)
-			if item.Name in [allTools[1.0].Name for x in allTools]:
+		def _transferItem(item, regID):
+			# Store existing locator tool names in a list to compare against.
+			allTools = []
+			for x in comp.GetToolList().values():
+				if x.GetAttrs()['TOOLS_RegID'] == 'Locator3D':
+					allTools.append(x.Name)
+
+			# If the item doesn't exist, create it, otherwise update it.
+			if item.Name in allTools:
 				Application.LogMessage("Send to Fusion: Found '%s', updating values..." %item.Name)
 				tool = comp.FindTool(str(item.Name))
 			else:
@@ -131,9 +136,9 @@ def SendToFusion_Execute(  ):
 		# run the transfer function on selected items
 		for item in Application.Selection:
 			if item.Type == 'camera':
-				transferItem(item, 'Camera3D')
+				_transferItem(item, 'Camera3D')
 			elif item.Type == 'null':
-				transferItem(item, 'Locator3D')
+				_transferItem(item, 'Locator3D')
 
 	return true
 	
